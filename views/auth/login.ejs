@@ -1,13 +1,14 @@
-<%- include('includes/header.ejs') %>
+<%- include('../includes/header.ejs') %>
+<link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
     <main>
         <div class="glass">
             <div class="dashboard">
-                <%- include('includes/user-navigation.ejs') %>
+                <%- include('./login-navigation.ejs') %>
             </div>
             <div class="content">
-                <%- include('contents/todo.ejs') %>
+                    <%- include('../contents/login.ejs') %>
             </div>
         </div>
         <div class="circle1"></div>

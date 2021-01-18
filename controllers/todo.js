@@ -3,6 +3,6 @@ exports.getIndex = (req, res, next) => {
         title: 'Todos',
         username: 'Tobi',
         membershipLevel: 'Pro User',
-        content: 'todos'
-    })
-}
+        isLoggedIn: false,
+    });
+};
