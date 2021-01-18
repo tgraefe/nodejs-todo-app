@@ -1,0 +1,18 @@
+<%- include('includes/header.ejs') %>
+</head>
+<body>
+    <main>
+        <div class="glass">
+            <div class="dashboard">
+                <%- include('includes/dashboard.ejs') %>
+            </div>
+            <div class="content">
+                <% if(content === 'todos') { %>
+                    <%- include('contents/todo.ejs') %>
+                <% } %>
+            </div>
+        </div>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+    </main>
+</body>
