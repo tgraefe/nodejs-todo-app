@@ -78,8 +78,11 @@ main {
 .link {
     display: flex;
     align-items: center;
-    margin: 2rem;
+    margin: 2rem 0;
     text-decoration: none;
+    background: none;
+    border: none;
+    
 }
 .link h2 {
     font-size: 1rem;

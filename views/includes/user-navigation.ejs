@@ -21,5 +21,12 @@
         <img src="/icons/settings.svg" alt="" />
         <h2>Settings</h2>
     </a>
+    <form action="/logout" method="post">
+        <button class="link" type="submit">
+            <img src="/icons/auth/logout.svg" alt="" />
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <h2>Logout</h2>
+        </button>
+    </form>
 </div>
 <div class="advertisement"></div>
