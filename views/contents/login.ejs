@@ -1,4 +1,9 @@
 <div class="login-container">
+    <% if(errorMessage) { %>
+        <div class="error">
+            <h2><%= errorMessage %></h2>
+        </div>
+    <% } %>
     <form class="form" action="/login" method="post">
         <label for="username">Username:</label>
         <input class="form__control" type="text" name="username" />

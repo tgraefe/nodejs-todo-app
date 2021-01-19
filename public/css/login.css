@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 80%;
 }
 
@@ -59,4 +60,14 @@
     background: linear-gradient(to right top, #65d7ce, #65a5ef);
     /* border: 1px solid transparent; */
     cursor: pointer;
+}
+
+.error{
+    border-radius: 1rem;
+    background-color: rgb(253, 53, 53);
+    padding: 1rem;
+    
+}
+.error h2{
+    color: white;
 }
