@@ -1,0 +1,15 @@
+<div class="login-container">
+    <% if(errorMessage) { %>
+        <div class="error">
+            <h2><%= errorMessage %></h2>
+        </div>
+    <% } %>
+    <form class="form" action="/add-todo" method="post">
+        <label for="title">Title:</label>
+        <input class="form__control" type="text" name="title" />
+        <label for="details">Details:</label>
+        <input class="form__control" type="text" name="details" />
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <button class="btn__submit" type="submit">Add Todo</button>
+    </form>
+</div>

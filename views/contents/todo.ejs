@@ -6,29 +6,25 @@
             <h2>Add todo</h2>
         </a>
     </div>
-    <div class="todos__list">
-        <%- include('../includes/todo-item.ejs') %>
-        <div class="todos__list-item">
-            <div class="todos__list-item-state"></div>
-            <div class="todos__list-item-details">
-                <h3>Framework bauen</h3>
-                <p>Framework für Rhein Ruhr erstellen</p>
-            </div>
-            <div class="todos__list-item-assignedTo">
-                <img src="/user/tobias-graefe.jpg" alt="" />
-                <h3>Marco</h3>
-            </div>
-        </div>
-        <div class="todos__list-item">
-            <div class="todos__list-item-state"></div>
-            <div class="todos__list-item-details">
-                <h3>Framework bauen</h3>
-                <p>Framework für Rhein Ruhr erstellen</p>
-            </div>
-            <div class="todos__list-item-assignedTo">
-                <img src="/user/tobias-graefe.jpg" alt="" />
-                <h3>Wilm</h3>
-            </div>
-        </div>
+    <% if(todos.length > 0){ %>
+        <div class="todos__list">
+            <% for(let todo of todos) { %>
+                <div class="todos__list-item">
+                    <div class="todos__list-item-state"></div>
+                    <div class="todos__list-item-details">
+                        <h3><%= todo.title %></h3>
+                        <p><%= todo.details %></p>
+                    </div>
+                    <div class="todos__list-item-assignedTo">
+                        <img src="/user/tobias-graefe.jpg" alt="" />
+                        <h3>Holger</h3>
+                    </div>
+                </div>
+                
+            <% } %>
+        <% } else { %> 
+            <h2>Nothing to do so far!</h2>
+        <% } %>
+        
     </div>
 </div>

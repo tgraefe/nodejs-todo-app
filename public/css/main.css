@@ -126,6 +126,18 @@ main {
     padding-right: 2rem;
 }
 
+.todos__list-item-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex: 5;
+    margin: 0 1rem;
+}
+.todos__list-item-details h3{
+    text-align: left;
+}
+
 .todos__list-item-state {
     height: 20px;
     width: 20px;
