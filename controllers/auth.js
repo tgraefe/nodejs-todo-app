@@ -35,7 +35,12 @@ exports.postLogin = (req, res, next) => {
             bcrypt.compare(password, user.password)
             .then(doMatch => {
                 if(doMatch){
-                    return res.redirect('/')
+                    req.session.isLoggedIn = true;
+                    req.session.user = user;
+                    return req.session.save(err => {
+                        if(err) console.log(err)
+                        return res.redirect('/')
+                    })
                 } else {
                     return res.render('auth/login', {
                         title: 'Login',
