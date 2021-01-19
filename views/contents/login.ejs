@@ -9,6 +9,7 @@
         <input class="form__control" type="text" name="username" />
         <label for="password">Password:</label>
         <input class="form__control" type="password" name="password" />
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
         <button class="btn__submit" type="submit">Login</button>
     </form>
 </div>
