@@ -14,6 +14,7 @@ const User = require('./models/user');
 
 const authRoutes = require('./routes/auth');
 const todoRoutes = require('./routes/todo');
+const userRoutes = require('./routes/user');
 
 const app = express();
 
@@ -56,6 +57,7 @@ app.use((req, res, next) => {
 
 app.use(authRoutes);
 app.use(todoRoutes);
+app.use(userRoutes);
 
 mongoose
     .connect(process.env.MONGO_URI)

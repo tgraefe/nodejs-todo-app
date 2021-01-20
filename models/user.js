@@ -28,6 +28,18 @@ const userSchema = new Schema({
             },
         },
     ],
+    stats: {
+        finishedCnt : Number,
+        inTime: Number,
+        finishedTodos:
+        [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Todo',
+                required: true,
+            }
+        ]
+    }
 });
 
 module.exports = mongoose.model('User', userSchema);

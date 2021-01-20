@@ -6,21 +6,11 @@
             <h2>Add todo</h2>
         </a>
     </div>
+    <div class="todos__list">
     <% if(todos.length > 0){ %>
-        <div class="todos__list">
+        <h3>Active todos</h3>
             <% for(let todo of todos) { %>
-                <div class="todos__list-item">
-                    <div class="todos__list-item-state"></div>
-                    <div class="todos__list-item-details">
-                        <h3><%= todo.title %></h3>
-                        <p><%= todo.details %></p>
-                    </div>
-                    <div class="todos__list-item-assignedTo">
-                        <img src="/user/tobias-graefe.jpg" alt="" />
-                        <h3>Holger</h3>
-                    </div>
-                </div>
-                
+                <%- include('../includes/todo-item.ejs', {todo: todo.todoId}) %>
             <% } %>
         <% } else { %> 
             <h2>Nothing to do so far!</h2>

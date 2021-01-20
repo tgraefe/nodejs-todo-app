@@ -83,6 +83,13 @@ exports.postSignup = (req, res, next) => {
                 username: username,
                 email: email,
                 password: hashedPassword,
+                avatarImgUrl: '',
+                todos: [],
+                stats: {
+                    finishedCnt: 0,
+                    inTime: 0,
+                    finishedTodos: []
+                }
             });
 
             user.save();
